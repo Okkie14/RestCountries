@@ -1,0 +1,312 @@
+/* Search Styles */
+.countriesDisplay {
+    display: flex;
+    justify-content: space-between;
+    width: var(--displayWidth);
+    margin-inline: auto;
+    padding-top: 3em;
+}
+
+.countriesDisplay.light {
+    background-color: inherit;
+}
+
+.countriesDisplay.dark {
+    background-color: var(--darkMode-Background);
+}
+
+.containerBody {
+    height: 100%;
+}
+
+
+main .containerBody.light {
+    background-color: var(--lightMode-Background);
+}
+
+main .containerBody.dark {
+    background-color: var(--darkMode-Background);
+}
+
+/* Country View Styles */
+
+.countryViewMain {
+    height: 100dvh;
+}
+
+.countryViewMain.dark {
+    background-color: var(--darkMode-Background);
+}
+
+.countryViewMain.light {
+    background-color: var(--lightMode-Background);
+}
+
+.viewMain {
+    width: var(--displayWidth);
+    margin-inline: auto;
+}
+
+.viewContainer {
+    display: flex;
+    margin-top: 5em;
+    gap: 10em;
+    height: 30em;
+    width: 100%;
+}
+
+.backBtn {
+    display: flex;
+    border: none;
+    border-radius: 0.2em;
+    align-self: center;
+    box-shadow: 0px 0px 10px lightgray;
+    padding: 0.5em 3em;
+}
+
+.backBtn.dark {
+    color: var(--lightMode-Text)
+}
+
+.backBtn.dark {
+    color: var(--darkMode-Text)
+}
+
+.backBtn:hover {
+    cursor: pointer;
+}
+
+.backBtnContainer {
+    margin: 2em 0;
+}
+
+.countryFlag {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 50%;
+}
+
+.countryInformationContainer {
+    display: grid;
+    align-items: center;
+
+    background-color: inherit;
+    width: 50%;
+}
+
+.countryInformationContainer.light {
+    background-color: inherit;
+}
+
+.countryInformationContainer.dark {
+    background-color: inherit;
+}
+
+.countryInformation {
+    display: grid;
+    font-family: var(--fontBold);
+    background-color: inherit;
+}
+
+.countryInformation.light {
+    background-color: inherit;
+}
+
+.countryInformation.dark {
+    background-color: inherit;
+}
+
+.countryInformation span {
+    font-family: var(--fontRegular);
+}
+
+.countryInformationHeader {
+    font-size: 2rem;
+    font-family: var(--fontBold);
+    background-color: inherit;
+}
+
+.countryInformationHeader.dark {
+    color: var(--darkMode-Text);
+    background-color: inherit;
+}
+
+.countryInformationHeader.light {
+    color: var(--lightMode-Text);
+    background-color: inherit;
+}
+
+.countryInformationItem {
+    background-color: inherit;
+}
+
+.countryInformationItem.light {
+    color: var(--lightMode-Text);
+    background-color: inherit;
+}
+
+.countryInformationItem.dark {
+    color: var(--darkMode-Text);
+    background-color: inherit;
+}
+
+.borders {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.borderBtn {
+    border: none;
+    border-radius: 0.2em;
+    padding: 0.25em 1.5em;
+    
+}
+
+.borderBtn.dark {
+    color: var(--darkMode-Text);
+    background-color: var(--darkMode-Elements);
+    box-shadow: 0 0 10px rgba(0,0,0, 0.25);
+}
+
+.borderBtn.light {
+    color: var(--lightMode-Text);
+    background-color: var(--lightMode-Elements);
+    box-shadow: 0 0 10px lightgrey;
+}
+
+.borderCountries {
+    font-family: var(--fontBold);
+}
+
+/* Main Container Styles */
+
+.cardContainer {
+    width: var(--displayWidth);
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3em;
+    gap: 4em;
+
+}
+
+.card {
+    width: 14em;
+    border-radius: 0.25em;
+    overflow: hidden;
+}
+
+.card.light {
+    background-color: var(--lightMode-Elements);
+    color: var(--lightMode-Text);
+}
+
+.card.dark {
+    background-color: var(--darkMode-Elements);
+    color: var(--darkMode-Text);
+}
+
+.countryInfo {
+    padding: 1.5em
+}
+
+.countryName {
+    margin-bottom: 0.5em;
+    font-family: var(--fontBold), system-ui;
+}
+
+.countryDetails {
+    font-size: 0.75rem;
+    margin-bottom: 0.25em;
+    font-family: var(--fontBold), system-ui;
+}
+
+.countryDetails span {
+    font-family: var(--fontRegular), system-ui;
+}
+
+.countryImg {
+    height: 8em;
+    width: 14em;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.noResults {
+    height: calc(100vh - 80px - 9.5em);
+    background-color: inherit;
+    width: 100%;
+}
+
+.noResultsHeader {
+    text-align: center;
+    margin-inline: auto;
+    background-color: inherit;
+}
+
+.noResultsHeader.light {
+    background-color: inherit;
+    color: var(--lightMode-Text);
+}
+
+.noResultsHeader.dark {
+    background-color: inherit;
+    color: var(--darkMode-Text);
+}
+
+@media screen and (width <= 900px) {
+    .countriesDisplay {
+        display: grid;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    .cardContainer {
+        justify-content: center;
+    }
+
+    .viewContainer {
+        display: grid;
+        margin-top: 2em;
+        gap: 2em;
+        height: fit-content;
+    }
+
+    .countryFlag {
+        width: 100%;
+    }
+    .countryInformationContainer{
+        width: 100%;
+    }
+
+    .countryInformationHeader {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .countryInformation {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .countryViewMain {
+        height: 100%;
+    }
+
+    .borders {
+        margin-top: 1em;
+    }
+
+}
+
+@media screen and (width > 1200px) {
+    .countryInformation {
+        grid-template-columns: 1fr 1fr;
+    }
+}

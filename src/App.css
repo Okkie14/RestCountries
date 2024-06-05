@@ -1,0 +1,61 @@
+@font-face {
+  font-family: NunitoSans-Bold;
+  src: url('../fonts/NunitoSans_10pt-ExtraBold.ttf');
+}
+
+.navBar {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3em;
+  font-family: NunitoSans-Bold, system-ui;
+  box-shadow: 10px 0 10px lightgray;
+}
+
+.navBar.dark {
+  background-color: var(--darkMode-Elements);
+}
+
+.navBar.light {
+  background-color: var(--lightMode-Elements);
+}
+
+.navBtn.dark {
+  background-color: inherit;
+  border: none;
+  color: var(--darkMode-Text);
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+}
+
+.navBtn.light {
+  background-color: inherit;
+  border: none;
+  color: var(--lightMode-Text);
+}
+
+.navHeader.dark {
+  color: var(--darkMode-Text)
+}
+
+.navHeader.light {
+  color: var(--lightMode-Text);
+}
+
+.btnContainer:hover, .navBtn:hover {
+  cursor: pointer;
+}
+
+@media screen and (width <= 500px) {
+  .navBar {
+    padding-inline: 1em;
+  }
+
+  .navHeader {
+    font-size: 1rem;
+  }
+}
